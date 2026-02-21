@@ -128,7 +128,7 @@ body.loaded .floating-element {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     transition: all var(--transition-base);
     filter: brightness(1);
 }
@@ -1956,4 +1956,5 @@ body.loaded .floating-element {
     .image-stack {
         max-width: 280px;
     }
+
 }
