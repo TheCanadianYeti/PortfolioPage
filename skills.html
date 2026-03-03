@@ -9,7 +9,37 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
-
+<style>
+    .skills-section {
+        margin-bottom: var(--spacing-3xl);
+    }
+    .section-title {
+        font-family: var(--font-display);
+        font-size: 2rem;
+        margin-bottom: var(--spacing-xl);
+        color: var(--color-primary);
+        border-left: 4px solid var(--color-primary);
+        padding-left: var(--spacing-md);
+    }
+    .skill-card {
+        cursor: default;
+    }
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+        margin-top: auto;
+    }
+    .skill-tag {
+        background: var(--color-surface-elevated);
+        color: var(--color-primary);
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-family: var(--font-mono);
+        border: 1px solid var(--color-border);
+    }
+</style>
 </head>
 <body>
     <div class="grain-overlay"></div>
@@ -30,7 +60,7 @@
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
-                    <a href="#" class="current">Skills</a>
+                    <a href="skills.html" class="current">Skills</a>
                     <a href="projects.html">Projects</a>
                     <a href="contact.html">Contact Me</a>
                     <div class="github">
@@ -43,50 +73,181 @@
         </div>
     </header>
 
-    <main class="coming-soon-page">
-        <div class="coming-soon-container">
-            <div class="coming-soon-content">
+    <main class="skills-page" style="padding: var(--spacing-3xl) 0; padding-top: calc(var(--spacing-3xl) + 80px);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-md);">
+            <div class="projects-header" style="margin-bottom: var(--spacing-3xl);">
                 <div class="status-badge">
-                    <span class="status-dot status-dot-warning"></span>
-                    <span class="status-text">In Development</span>
+                    <span class="status-dot"></span>
+                    <span class="status-text">Technical Expertise</span>
                 </div>
                 
-                <h1 class="coming-soon-title">Skills & Expertise</h1>
-                <p class="coming-soon-subtitle">Coming Soon</p>
+                <h1 class="projects-title">Skills & Capabilities</h1>
+                <p class="projects-subtitle">A comprehensive overview of my technical toolkit</p>
                 
-                <p class="coming-soon-text">
-                    This page is currently under construction. Soon you'll see a comprehensive overview 
-                    of my technical skills, tools, and technologies I work with.
+                <p class="projects-description">
+                    As a student in Software Development and Network Engineering, I bridge the gap between 
+                    application development and infrastructure. Here are the core technologies and concepts I work with.
                 </p>
-                
-                <div class="coming-soon-buttons">
-                    <a href="index.html" class="btn btn-primary">
-                        <span>Back to Home</span>
-                    </a>
-                    <a href="contact.html" class="btn btn-secondary">
-                        <span>Contact Me</span>
-                    </a>
-                </div>
             </div>
-            
-            <div class="coming-soon-visual">
-                <div class="code-preview">
-                    <div class="code-header">
-                        <span class="code-dot"></span>
-                        <span class="code-dot"></span>
-                        <span class="code-dot"></span>
+
+            <!-- Programming & Web Development -->
+            <section class="skills-section">
+                <h2 class="section-title">Programming & Web Development</h2>
+                <div class="projects-grid">
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <h3 class="project-name">Frontend Development</h3>
+                        </div>
+                        <p class="project-description">Building responsive, modern user interfaces with a focus on clean code and user experience.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
                     </div>
-                    <div class="code-body">
-                        <pre><code><span class="code-comment">// Skills collection</span>
-<span class="code-keyword">const</span> <span class="code-variable">skills</span> = [
-  <span class="code-string">"JavaScript"</span>,
-  <span class="code-string">"Python"</span>,
-  <span class="code-string">"Network Engineering"</span>,
-  <span class="code-comment">// More to come...</span>
-];</code></pre>
+
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            </div>
+                            <h3 class="project-name">Backend & Logic</h3>
+                        </div>
+                        <p class="project-description">Implementing server-side logic, data processing, and automation scripts.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Bash/Shell</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </div>
+                            <h3 class="project-name">Core Principles</h3>
+                        </div>
+                        <p class="project-description">Applying fundamental computer science concepts to build robust software.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OOP</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Network Engineering -->
+            <section class="skills-section">
+                <h2 class="section-title">Network Engineering</h2>
+                <div class="projects-grid">
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                            </div>
+                            <h3 class="project-name">Infrastructure</h3>
+                        </div>
+                        <p class="project-description">Designing and managing network systems and hardware configurations.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TCP/IP</span>
+                            <span class="skill-tag">OSI Model</span>
+                            <span class="skill-tag">Routing & Switching</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3 class="project-name">Network Services</h3>
+                        </div>
+                        <p class="project-description">Configuring and securing essential network protocols and services.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">DNS/DHCP</span>
+                            <span class="skill-tag">Subnetting</span>
+                            <span class="skill-tag">Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools & Technologies -->
+            <section class="skills-section">
+                <h2 class="section-title">Tools & Environment</h2>
+                <div class="projects-grid">
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </div>
+                            <h3 class="project-name">Development Tools</h3>
+                        </div>
+                        <p class="project-description">Daily tools for version control, coding, and debugging.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Chrome DevTools</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+                            </div>
+                            <h3 class="project-name">Systems</h3>
+                        </div>
+                        <p class="project-description">Working with operating systems and command-line environments.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">CLI</span>
+                            <span class="skill-tag">Windows</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Roadmap -->
+            <section class="skills-section">
+                <h2 class="section-title">On the Horizon</h2>
+                <div class="projects-grid">
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h3 class="project-name">Cloud & DevOps</h3>
+                        </div>
+                        <p class="project-description">Expanding into infrastructure as code and automated deployment.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">AWS/Azure</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card skill-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <h3 class="project-name">Modern Frameworks</h3>
+                        </div>
+                        <p class="project-description">Deepening knowledge of professional-grade application frameworks.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         
         <div class="bg-decoration deco-1"></div>
@@ -100,6 +261,16 @@
         menu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menu.classList.toggle('open');
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
