@@ -85,7 +85,7 @@ podnarWeb/
 │   └── typewriter.js   # Typewriter animation script
 └── images/             # Logo, profile photo, icons
     ├── github.png      # GitHub Logo
-    ├── thumb.png      # The logo i designed for the logo and the favicon
+    ├── thumb.png       # The logo i designed for the logo and the favicon
     └── Me.jpg          # A picture of me 
 ```
 
