@@ -38,7 +38,7 @@
                     <a href="projects.html">Projects</a>
                     <a href="#" class="current">Contact Me</a>
                     <div class="github">
-                        <a href="https://github.com/TheCanadianYeti" target="_blank">
+                        <a href="https://github.com/TheCanadianYeti" target="_blank" aria-label="GitHub Profile">
                             <img src="images/github.png" alt="Github">
                         </a>
                     </div>
@@ -134,6 +134,15 @@
         menu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menu.classList.toggle('open');
+        });
+
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
