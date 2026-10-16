@@ -1,4 +1,4 @@
-# podnarWeb
+# PortfolioPage
 
 > Personal portfolio and web presence for [marcus.podnar.ca](https://marcus.podnar.ca) — built from scratch with vanilla HTML, CSS, and JavaScript.
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-podnarWeb is a fully hand-coded personal portfolio site built without any frameworks or libraries. It serves as both a professional showcase and a living project — a place to experiment with frontend design, practice clean code, and demonstrate skills to potential employers.
+PortfolioPage is a fully hand-coded personal portfolio site built without any frameworks or libraries. It serves as both a professional showcase and a living project — a place to experiment with frontend design, practice clean code, and demonstrate skills to potential employers.
 
 🌐 **Live site:** [https://marcus.podnar.ca](https://marcus.podnar.ca)
 
@@ -72,7 +72,7 @@ No frameworks. No build tools. No dependencies.
 ## Project Structure
 
 ```
-podnarWeb/
+PortfolioPage/
 ├── index.html          # Home / hero page
 ├── about.html          # About page
 ├── skills.html         # Skills page
