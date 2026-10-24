@@ -1,14 +1,14 @@
-# podnarWeb
+# PortfolioPage
 
-> Personal portfolio and web presence for [marcus.podnar.ca](https://marcus.podnar.ca) — built from scratch with vanilla HTML, CSS, and JavaScript.
+Personal portfolio and web presence for marcus.podnar.ca, built from scratch with vanilla HTML, CSS, and JavaScript.
 
 ---
 
 ## Overview
 
-podnarWeb is a fully hand-coded personal portfolio site built without any frameworks or libraries. It serves as both a professional showcase and a living project — a place to experiment with frontend design, practice clean code, and demonstrate skills to potential employers.
+PortfolioPage is a hand-coded personal portfolio site built without frameworks or libraries. It serves as a professional showcase to experiment with frontend design, practice clean code, and demonstrate core web development capabilities.
 
-🌐 **Live site:** [https://marcus.podnar.ca](https://marcus.podnar.ca)
+Live site: <a href="https://marcus.podnar.ca" target="_blank" rel="noopener noreferrer">marcus.podnar.ca</a>
 
 ---
 
@@ -16,14 +16,15 @@ podnarWeb is a fully hand-coded personal portfolio site built without any framew
 
 | Tool | Purpose |
 |------|---------|
-| **HTML5** | Page structure and semantic markup |
-| **CSS3** | All styling — custom properties, animations, responsive layout |
-| **Vanilla JavaScript** | Interactivity, DOM manipulation, API calls |
-| **GitHub API** | Dynamically fetches and displays public repositories |
-| **Google Fonts** | Syne (display) + JetBrains Mono (monospace) |
-| **Apache** | Production hosting |
+| HTML5 | Page structure and semantic markup |
+| CSS3 | Styling, custom properties, animations, responsive layout |
+| Vanilla JavaScript | Interactivity, DOM manipulation, API calls |
+| GitHub API | Dynamically fetches and displays public repositories |
+| Google Fonts | Syne and JetBrains Mono |
+| Caddy on TrueNAS | Current self-hosted production reverse proxy |
+| Apache | Legacy production web server deployment |
 
-No frameworks. No build tools. No dependencies.
+No frontend frameworks. No build tools. No runtime dependencies.
 
 ---
 
@@ -31,82 +32,90 @@ No frameworks. No build tools. No dependencies.
 
 | Page | Description |
 |------|-------------|
-| `index.html` | Hero landing page with typewriter effect, profile image, and floating code elements |
-| `about.html` | Background, education, career goals, tech stack, and personal philosophy |
-| `skills.html` | Categorized skill cards — frontend, backend, networking, tools, and roadmap |
-| `projects.html` | Dynamically loaded GitHub repositories via the GitHub REST API |
-| `contact.html` | Contact links with a styled code block visual |
+| index.html | Hero landing page with typewriter effect, profile image, and floating code elements |
+| about.html | Background, education, career goals, tech stack, and personal philosophy |
+| skills.html | Categorized skill cards across frontend, backend, networking, tools, and roadmap |
+| projects.html | Dynamically loaded public repositories via the GitHub REST API |
+| contact.html | Contact links with a styled code block visual |
 
 ---
 
 ## Features
 
-**Design**
-- Dark, developer-aesthetic theme with deep navy, electric blue, and cyan accents
-- Subtle film grain overlay for texture
-- Animated background blobs and floating UI elements
-- Smooth CSS keyframe animations throughout (fade, slide, float, pulse)
+Design:
+- Dark developer-focused theme with deep navy, electric blue, and cyan accents
+- Subtle film grain texture overlay
+- Animated background elements and floating UI components
+- Pure CSS keyframe animations for entry and state transitions
 
-**Navigation**
+Navigation:
 - Fixed frosted-glass header with scroll-aware styling
-- Responsive hamburger menu for mobile with slide-in panel
-- Active page indicator with glowing dot
+- Mobile hamburger navigation with fluid slide-in panel
+- Active page indicators
 
-**Homepage**
-- Typewriter effect (`js/typewriter.js`) — disabled on mobile for performance
-- Parallax scroll effect on floating elements
-- Profile photo with layered frame animation
+Homepage:
+- Typewriter text effect disabled on mobile devices for performance
+- Parallax depth effects on floating visual assets
+- Profile framing animations
 
-**Projects Page**
-- Fetches all public repos via the GitHub API at runtime
-- Filters out forks, sorts by stars and last updated
-- Displays language, star count, fork count, and relative update time
-- Animated card entrance on load
+Projects Page:
+- Runtime fetching of public repositories via the GitHub REST API
+- Filters out forks and sorts repositories by stars and update timestamps
+- Dynamically extracts repository languages, star counts, and fork counts
+- Staggered card entrance transitions
 
-**Skills Page**
-- Organized into sections: Frontend, Backend, Networking, Tools, and On the Horizon
-- Skill tag chips per category
+Skills Page:
+- Categorized skill breakdown covering Frontend, Backend, Systems, Networking, and Infrastructure
+- Dedicated badge chips for each technology
 
 ---
 
 ## Project Structure
 
 ```
-podnarWeb/
-├── index.html          # Home / hero page
+PortfolioPage/
+├── index.html          # Hero page
 ├── about.html          # About page
-├── skills.html         # Skills page
-├── projects.html       # GitHub projects (API-driven)
-├── contact.html        # Contact page
+├── skills.html         # Skills breakdown
+├── projects.html       # GitHub API projects view
+├── contact.html        # Contact endpoints
 ├── css/
-│   ├── style.css       # Main stylesheet
-│   └── style-old.css   # Legacy reference stylesheet
+│   ├── style.css       # Production stylesheet
+│   └── style-old.css   # Legacy reference styles
 ├── js/
-│   └── typewriter.js   # Typewriter animation script
-└── images/             # Logo, profile photo, icons
-    ├── github.png      # GitHub Logo
-    ├── thumb.png       # The logo i designed for the logo and the favicon
-    └── Me.jpg          # A picture of me 
+│   └── typewriter.js   # Typewriter effect script
+└── images/             # Visual assets, branding, and headshots
+    ├── github.png
+    ├── thumb.png
+    └── Me.jpg
 ```
+
+---
+
+## Infrastructure and Hosting Evolution
+
+The application originally ran in production on an industry-standard Apache HTTP Server deployment, configuring virtual hosts, MIME types, and directory access rules.
+
+To integrate with homelab infrastructure, the deployment moved to a self-hosted TrueNAS environment behind a Caddy reverse proxy. This architecture automates TLS certificate provisioning and terminates HTTPS traffic while routing requests to internal storage pools.
 
 ---
 
 ## What I Learned
 
-- Writing and organizing a **multi-page site in pure CSS** using custom properties and a consistent design system
-- Using the **GitHub REST API** to dynamically populate content without a backend
-- Implementing CSS **keyframe animations** and **parallax effects** without libraries
-- Responsive design with a **mobile-first hamburger nav** and fluid typography using `clamp()`
-- Managing a project for a **real production deployment** on Apache
+- Writing scalable, multi-page stylesheets using native CSS variables and fluid typography clamp functions
+- Interfacing with the GitHub REST API directly to handle live project updates without backend middleware
+- Building lightweight UI animations using hardware-accelerated CSS keyframes instead of heavy JavaScript libraries
+- Configuring production web servers with Apache HTTP Server
+- Deploying, routing, and automating TLS certificates using Caddy on TrueNAS storage systems
 
 ---
 
 ## Status
 
-✅ **Live and actively maintained** — [marcus.podnar.ca](https://marcus.podnar.ca)
+Live and actively maintained: <a href="https://marcus.podnar.ca" target="_blank" rel="noopener noreferrer">marcus.podnar.ca</a>
 
 ---
 
 ## Author
 
-[Marcus Podnar](https://marcus.podnar.ca) · [GitHub](https://github.com/TheCanadianYeti) · [LinkedIn](https://www.linkedin.com/in/marcus-podnar-582187260/)
+<a href="https://marcus.podnar.ca" target="_blank" rel="noopener noreferrer">Marcus Podnar</a> | <a href="https://github.com/TheCanadianYeti" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/marcus-podnar-582187260/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
