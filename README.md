@@ -1,5 +1,9 @@
 # PortfolioPage
 
+> **This is an older version of my portfolio.** My updated portfolio repository can be found [here](https://github.com/TheCanadianYeti/my-portfolio/). | **Consider This Project Deprecated**
+
+
+
 Personal portfolio and web presence for marcus.podnar.ca, built from scratch with vanilla HTML, CSS, and JavaScript.
 
 ---
